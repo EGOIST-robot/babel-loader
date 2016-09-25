@@ -76,7 +76,7 @@ module.exports = function(source, inputSourceMap) {
   var filename = webpackRemainingChain[webpackRemainingChain.length - 1];
 
   // Handle options
-  var globalOptions = this.options.babel || {};
+  var globalOptions = this.babel || this.options.babel || {};
   var loaderOptions = loaderUtils.parseQuery(this.query);
   var userOptions = assign({}, globalOptions, loaderOptions);
   var defaultOptions = {
